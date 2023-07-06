@@ -33,24 +33,6 @@
  </div>
   <canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
   <script type="text/javascript">load();</script>
-  <script>
-  function onScanSuccess(decodedText, decodedResult) {
-      // Handle on success condition with the decoded text or result.
-      var output = document.getElementById('result');
-      output.innerHTML =`${decodedText}`, decodedResult;
-
-      window.open('${output}');
-
-      html5QrcodeScanner.clear();
-  }
-
-  function onScanError(errorMessage) {
-      // handle on error condition, with error message
-  }
-
-  var html5QrcodeScanner = new Html5QrcodeScanner(
-      "reader", { fps: 10, qrbox: 250 });
-  html5QrcodeScanner.render(onScanSuccess, onScanError);
-  </script>
+  <script src="js/scanner.js"></script>
 </body>
 </html>
