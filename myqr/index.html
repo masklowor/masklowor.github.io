@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 QR Code Scanner</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+  <link rel="stylesheet" href="css/scanner.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/html5-qrcode.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<center>
+    <div id="card">
+      <div id="card-body">
+        <h1>RizkyNet QR Code Scanner</h1>
+            <div class="camera" id="reader"></div>
+            <div id="result"></div>
+            <div style="display: table-cell; padding:3px;">
+              <a class="text-light btn btn-sm bg-primary" style="border-radius: 5px;" id="reload" onclick="location.reload();"><i class="text-light fa fa-camera"></i> Reload Camera</a>
+            </div>
+            <div style="display: table-cell; padding:3px;">
+              <a class="text-light btn btn-sm bg-primary" style="border-radius: 5px;" href=""><i class="fa fa-chrome"></i> Open in Chrome</a>
+            </div>
+            <div>QR CODE SCANNER <br>Powered by<a class="font-weight-bold" href="http://www.lomboknetworking.blogspot.com"> RizkyNet</div><br>
+      </div>
+    </div>
+  </center>
+  <canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
+  <script type="text/javascript">load();</script>
+  <script>
+  function onScanSuccess(decodedText, decodedResult) {
+      // Handle on success condition with the decoded text or result.
+      var output = document.getElementById('result');
+      output.innerHTML =`${decodedText}`, decodedResult;
+
+      window.open('$(output)');
+
+      html5QrcodeScanner.clear();
+  }
+
+  function onScanError(errorMessage) {
+      // handle on error condition, with error message
+  }
+
+  var html5QrcodeScanner = new Html5QrcodeScanner(
+      "reader", { fps: 10, qrbox: 250 });
+  html5QrcodeScanner.render(onScanSuccess, onScanError);
+  </script>
+</body>
+</html>

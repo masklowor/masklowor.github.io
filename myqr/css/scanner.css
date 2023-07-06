@@ -1,0 +1,39 @@
+body{
+      background-color: #000000;
+      color :#ffffff;
+    }
+    video {
+      width: 100%    !important;
+      height: auto   !important;
+    }
+    .camera{
+      position: relative;
+      align-items: center;
+    }
+    #reader {
+      width: 600px;
+      height: auto;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      position: relative;
+      display:block;
+    }
+    #result {
+      font-size: 18px;
+      margin-top: 10px;
+      display: none;
+    }
+  .blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }

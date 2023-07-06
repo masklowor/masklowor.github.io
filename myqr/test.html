@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Scanner</title>
+  <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+</head>
+<body>
+  <h1>QR Code Scanner</h1>
+  <video id="video" width="320" height="240"></video>
+  <canvas id="canvas" width="320" height="240" style="display: none;"></canvas>
+  <div id="output"></div>
+
+  <script>
+    // Check if the browser supports getUserMedia
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Access the webcam stream
+      navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        var video = document.getElementById('video');
+        video.srcObject = stream;
+        video.play();
+        // Start scanning the video stream
+        scanQRCode();
+      });
+    }
+
+    function scanQRCode() {
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var qrCodeScanner = new QRCodeScanner(video, canvas, onScanSuccess);
+
+      // Callback function when a QR code is scanned successfully
+      function onScanSuccess(qrCode) {
+        // Display the scanned QR code value
+        var output = document.getElementById('output');
+        output.innerHTML = 'QR Code: ' + qrCode;
+
+        // Stop scanning
+        qrCodeScanner.stop();
+      }
+
+      // QR Code scanner class
+      function QRCodeScanner(video, canvas, onScan) {
+        var self = this;
+        var scanning = true;
+
+        // Initialize the QR code scanner
+        var decodeCallback = function(result) {
+          if (result !== 'error') {
+            onScan(result);
+          }
+          if (scanning) {
+            requestAnimationFrame(scanFrame);
+          }
+        };
+
+        // Start scanning frames from the video stream
+        requestAnimationFrame(scanFrame);
+
+        // Process each video frame
+        function scanFrame() {
+          if (scanning) {
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            try {
+              qrcode.decode();
+            } catch (error) {
+              // QR code not found in the current frame
+            }
+          }
+        }
+
+        // Stop the QR code scanner
+        this.stop = function() {
+          scanning = false;
+        };
+
+        // Initialize QR code decoding
+        qrcode.callback = decodeCallback;
+      }
+    }
+  </script>
+</body>
+</html>
