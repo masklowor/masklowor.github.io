@@ -1,9 +1,24 @@
 function onScanSuccess(decodedText, decodedResult) {
+    
     // Handle on success condition with the decoded text or result.
-    var output = document.getElementById('result');
-    output.innerHTML =`${decodedText}`, decodedResult;
+var output = document.getElementById('result');
 
-    html5QrcodeScanner.clear();
+
+// Get the URL parameters
+var urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of the 'result' parameter
+var resultParam = `${decodedText}`, decodedResult;
+
+// Set the innerHTML of the 'output' element to the value of the 'result' parameter
+output.innerHTML = resultParam;
+
+var url = (resultParam);
+
+window.open(url,'_self');
+   
+
+html5QrcodeScanner.clear();
 }
 
 function onScanError(errorMessage) {
