@@ -4,6 +4,7 @@
 <head>
   <title>HTML5 QR Code Scanner</title>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/scanner.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -12,13 +13,14 @@
   <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
- <div class="container-fluid">
-    <div class="row justify-content-sm-center">  
+<div class="container-fluid">
+    <div class="justify-content-sm-center">  
       <center>
           <div id="card">
             <div id="card-body">
+              <img class="logo" src="img/capture.gif">
               <h1>RizkyNet QR Code Scanner</h1>
-                  <div class="camera" id="reader" style="position: relative;"></div>
+                  <div class="camera" id="reader"></div>
                   <div id="result"></div>
                   <div style="display: table-cell; padding:3px;">
                     <a class="text-light btn btn-sm bg-primary" style="border-radius: 5px;" id="reload" onclick="location.reload();"><i class="text-light fa fa-camera"></i> Reload Camera</a>
@@ -32,10 +34,9 @@
         </center>
     </div>
  </div>
-  <canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
   <script type="text/javascript">load();</script>
   <script src="js/scanner.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script
+  <script src="js/popper.min.js"></script>
 </body>
 </html>
