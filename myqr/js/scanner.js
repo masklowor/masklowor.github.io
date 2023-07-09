@@ -15,7 +15,7 @@ output.innerHTML = resultParam;
 
 var url = (resultParam);
 
-window.open(url,'_self');
+window.open(url,'_blank');
    
 
 html5QrcodeScanner.clear();
