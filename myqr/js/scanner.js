@@ -30,41 +30,5 @@ var html5QrcodeScanner = new Html5QrcodeScanner(
 html5QrcodeScanner.render(onScanSuccess, onScanError);
 
 
-function requestCameraPermission() {
-      // Check if the browser supports mediaDevices.getUserMedia()
-      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        // Request camera permission
-        navigator.mediaDevices.getUserMedia({ video: true })
-          .then(function(stream) {
-            // Permission granted, create a new instance of HTML5QrcodeScanner
-            const qrCodeScanner = new Html5QrcodeScanner(
-              "reader",
-              { fps: 10, qrbox: 250 },
-              /* successCallback */ onScanSuccess
-            );
 
-            // Start scanning
-            qrCodeScanner.start();
-
-            // Handle scan success
-            function onScanSuccess(qrCodeMessage) {
-              const output = document.getElementById("output");
-              output.innerHTML = qrCodeMessage;
-              var url = (qrCodeMessage);
-              window.open(url,'_self');
-              qrCodeScanner.clear();
-            }
-
-          })
-          .catch(function(error) {
-            // Permission denied or error occurred, handle the error
-            console.log("Camera permission denied or error:", error);
-          });
-      } else {
-        console.log("getUserMedia API is not supported");
-      }
-    }
-
-    // Request camera permission when the page loads
-    window.onload = requestCameraPermission;
 
