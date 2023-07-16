@@ -1,4 +1,4 @@
-function onScanSuccess(decodedText, decodedResult) {
+ffunction onScanSuccess(decodedText, decodedResult) {
     
     // Handle on success condition with the decoded text or result.
 var output = document.getElementById('result');
@@ -15,7 +15,7 @@ output.innerHTML = resultParam;
 
 var url = (resultParam);
 
-window.open(url,'_blank');
+window.open(url,'_self');
    
 
 html5QrcodeScanner.clear();
