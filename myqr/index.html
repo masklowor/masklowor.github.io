@@ -3,51 +3,41 @@
 <html>
 <head>
   <title>HTML5 QR Code Scanner</title>
+  <link rel="icon" href="img/favicon.ico">
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/scanner.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/html5-qrcode.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/style.js"></script>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="justify-content-sm-center">  
-      <center>
-          <div id="card">
-            <div id="card-body">
-              <img class="logo" src="img/capture.gif">
-              <h1 class="text-light badge badge-primary rounded">RizkyNet QR Code Scanner</h1>
-                  <div class="camera" id="reader"></div>
-                  <div id="result"></div>
-                  <div style="display: table-cell; padding:3px;">
-                    <a class="text-light btn btn-sm bg-primary" style="border-radius: 5px;" id="reload" onclick="location.reload();"><i class="text-light fa fa-refresh"></i> Reload Camera</a>
-                  </div>
-                  <div style="display: table-cell; padding:3px;">
-                    <a class="text-light btn btn-sm bg-primary" style="border-radius: 5px;" href="intent://masklowor.github.io/myqr#Intent;scheme=http;package=com.android.chrome;end" onclick="openInChrome();"><i class="fa fa-chrome"></i> Open in Chrome</a>
-                  </div>
-                  <div class="text text-center">Android / IOS Section
-                    <p class="text text-center">Scanning Using File In Your Device</p>
-                    <div id="imageFile"></div>
-                      <div class="input-group justify-content-center" style="padding:3px;">
-                        <div class="input-group-prepend">
-                        <input name=file style="display:none;" id="qr-input-file" type="file" accept="image/*"/>                  
-                          <button class="text-light btn btn-sm bg-primary" style="border-radius: 5px;" type="button" name=file onclick="file()"><i class="fa fa-camera" aria-hidden="true"> Open File / Camera</i></button>
-                        </div>                                  
-                      </div>
-                      <div>QR CODE SCANNER <br>Powered by<a class="font-weight-bold" href="http://scanapp.org"> ScanApp.org</div>
-                  </div><br><hr>
-            </div>
+  <center>
+      <div class="container">
+      <img id="logo" class="logo">
+      <div class="badge blink">
+      <h3 id="header"></h3>
+      </div>
+     
+      <div id="reader"></div>
+      <div style="display: table-cell; padding:3px;">
+          <a class="btn" style="border-radius: 5px;" id="reload" onclick="location.reload();"><i class="text-light fa fa-refresh"></i> Reload Camera</a>
           </div>
-        </center>
-    </div>
- </div>
+          <div style="display: table-cell; padding:3px;">
+          <a class="btn" style="border-radius: 5px;" href="intent://masklowor.github.io/myqr#Intent;scheme=http;package=com.android.chrome;end" onclick="openInChrome();"><i class="fa fa-chrome"></i> Open in Chrome</a>
+          </div><br>
+          <div id="result"></div>
+          <div class="badge">Android / IOS Section</div>
+              <p>Scanning Using File In Your Device</p>
+              <div id="imageFile"></div>
+                  <div class="input">
+                  <input name=file style="display:none;" id="qr-input-file" type="file" accept="image/*"/>                  
+                  <button class="btn" style="border-radius: 5px;" type="button" name=file onclick="file()"><i class="fa fa-camera" aria-hidden="true"> Open File</i></button>                                 
+                </div>
+              <div>QR CODE SCANNER Powered by <a class="font-weight-bold" style="color: #1a8cff" href="https://scanapp.org">ScanApp.org</div><br>
+          
+          </div>
+  </center>   
   <script type="text/javascript">load();</script>
-  <script src="js/scanner.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
+  <script src="js/scannerv4.js"></script>
 </body>
 </html>
