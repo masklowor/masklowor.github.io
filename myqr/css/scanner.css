@@ -1,0 +1,262 @@
+*{
+  margin:0;
+  padding:0;
+  overflow-x,overflow-y:hidden;
+  font-face: "verdana","sans-serif";
+  box-sizing: border-box;
+}
+a,body,div,form,html,img,input,label,p,span
+{
+  margin:0;padding:0;border:0;font-family:sans-serif,Arial
+}
+body,html
+{
+  min-height:100%;overflow-x:hidden
+}
+body{
+  background-image: url('img/bg1.jpg');
+  background: #FFFF;
+  background-size: cover;
+}
+a{
+  color:#486173
+}
+.container{
+  height: auto;
+  max-width: 500px;
+  max-height: auto;
+  margin: 20px auto;
+  margin-top:20px;
+  border-radius:5px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  background: rgb(255, 255, 255); /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(255, 255, 255) 0%, rgba(255, 255, 255) 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(255, 255, 255) 0%,rgba(255, 255, 255) 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(255, 255, 255) 0%,rgba(255, 255, 255) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.logo
+{
+  padding-top: 5px;
+  max-width:200px;
+  min-height: auto;
+  display:block;
+  margin:5px 5px 5px 5px;
+}
+.logo 
+*{
+  fill:#fff}.lite .logo 
+  *{fill:#444
+
+   }
+   h1{text-align:center;color:#fff;font-size:24px!important}
+   *{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:16px}
+   .wrap
+   {
+    margin:auto;padding:40px;
+    -webkit-transition:width .3s ease-in-out;transition:width .3s ease-in-out
+   }
+   @media only screen and (min-width:1px) and (max-width:575px)
+   {
+    .wrap
+    {
+      width:100%
+    }
+   }
+   form
+   {
+    width:100%;margin-bottom:20px
+   }
+   @-webkit-keyframes fadeIn
+   {
+    from
+    {opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .fadeIn
+    {-webkit-animation-name:fadeIn;animation-name:fadeIn}
+    .animated
+    {-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+    .info
+    {color:#fff;text-align:center;margin-bottom:30px}
+    input
+    {
+      outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+    input:focus
+    {
+      outline:0
+    }
+    input[type=password],
+    input[type=text]
+    {
+      width:100%;
+      border:1px solid background-color: rgba(255,255,255,.8);
+      height:44px;
+      padding:3px 20px 3px 40px;
+      margin-bottom:5px;border-radius:6px;
+      background-color:rgba(255,255,255,.8);
+      -webkit-transition:-webkit-box-shadow .3s ease-in-out;
+      transition:-webkit-box-shadow .3s ease-in-out;
+      transition:box-shadow .3s ease-in-out;
+      transition:box-shadow .3s ease-in-out,
+      -webkit-box-shadow .3s ease-in-out
+    }
+    input[type=password]:focus,
+    input[type=text]:focus
+    {
+      -webkit-box-shadow:0 0 5px 0 rgba(255,255,255,1);
+      box-shadow:0 0 5px 0 rgba(255,255,255,1)
+    }
+    input[type=checkbox]:focus,
+    {
+      position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    .bt
+    {
+      opacity:.4
+    }
+    input[type=submit]
+    {
+      background:#e80cb8;color:#fff;
+      border:0;
+      cursor:pointer;
+      text-align:center;
+      width:100%;height:44px;
+      border-radius:6px;
+      -webkit-transition:background .3s ease-in-out;
+      transition:background .3s ease-in-out}
+    input[type=submit]:focus,
+    input[type=submit]:hover
+    {
+      background:#0ce838
+    }
+    table
+    {
+      border-collapse:collapse;width:100%;margin-bottom:20px
+    }
+    table td
+    {
+      color:#fff;
+      border-bottom:1px solid #e6e6e6;
+      padding:10px 4px 10px 0
+    }
+    table td:first-child
+    {
+      font-weight:700
+    }
+    .lite
+    {
+      background:#0f0e0e
+    }
+    .lite 
+    input[type=password],
+    .lite 
+    input[type=text]
+    {
+      border:1px solid #c3c3c3}
+      .lite .info,.lite h1,.lite table td
+      {
+        color:#444
+      }
+      .lite input[type=password]:focus,
+      .lite input[type=text]:focus
+      {
+        -webkit-box-shadow:0 0 5px 0 rgba(62,77,89,.2);
+        box-shadow:0 0 5px 0 rgba(62,77,89,.2)
+      }
+      .dark
+      {
+        background:#343434
+      }
+      .dark input[type=submit]
+      {
+        background:#dc3a41
+      }
+      .dark input[type=submit]:focus,
+      .dark input[type=submit]:hover
+      {
+        background:#b92f35
+      }
+      .dark input[type=password],
+      .dark input[type=text]
+      {
+        background-color:#fff
+      }
+      .dark 
+      a
+      {
+        color:#dc3a41
+      }
+      .dark 
+      table td
+      {
+        border-bottom:1px solid #505050
+      }
+      .info.alert
+      {
+        color:#da3d41
+      }
+
+      @media (min-width:576px)
+      {
+        .wrap
+        {
+          width:410px
+        }
+        *
+        {
+          font-size:14px!important
+        }
+      }
+      img 
+      {
+      border-radius: 0px;
+      }
+#reader{
+  max-width: 500px;
+  min-height: auto;
+  border: box;
+  margin-bottom: 10px;
+  padding: 5px auto 5px auto;
+}
+#result{
+  display: none;
+}
+.badge {
+  background-color: #1a8cff;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.btn{
+      margin-top:5px;
+      margin-bottom:10px;
+      padding:5px;
+      background-color:#1a8cff;
+      color: #ffffff;
+      border-radius:3px;
+      width: 150px;
+      cursor: pointer;
+      font-family: sans-serif;
+      
+     
+}
+.blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
