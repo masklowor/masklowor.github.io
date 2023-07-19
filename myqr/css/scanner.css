@@ -14,19 +14,21 @@ body,html
   min-height:100%;overflow-x:hidden
 }
 body{
-  background-image: url('img/bg1.jpg');
+  background-image: url('img/Bima.jpg');
   background: #FFFF;
   background-size: cover;
+  
 }
 a{
-  color:#486173
+  color:#1a8cff;
+  margin-bottom: 5px;
 }
 .container{
   height: auto;
-  max-width: 500px;
+  max-width: 490px;
   max-height: auto;
-  margin: 20px auto;
-  margin-top:20px;
+  margin: 5px auto;
+  margin-top:0px;
   border-radius:5px;
   box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
   background: rgb(255, 255, 255); /* Old browsers */
@@ -216,7 +218,7 @@ a{
       border-radius: 0px;
       }
 #reader{
-  max-width: 500px;
+  max-width: 490px;
   min-height: auto;
   border: box;
   margin-bottom: 10px;
@@ -225,12 +227,15 @@ a{
 #result{
   display: none;
 }
+#powered{
+  margin-bottom: 2px;
+}
 .badge {
   background-color: #1a8cff;
   color: white;
-  padding: 5px 10px;
-  margin-bottom: 5px;
-  border-radius: 10px;
+  padding: 2px 5px;
+  margin-bottom: 2px;
+  border-radius: 5px;
   display: inline-block;
 }
 .btn{
@@ -246,6 +251,33 @@ a{
       
      
 }
+.footer-copyright {
+    background-color: #027b9a;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.footer-copyright-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.footer-copyright-text {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.footer-copyright-link {
+    color: #fff;
+    text-decoration: none;
+}
+
 .blink {
         animation: blink-animation 1s steps(5, start) infinite;
         -webkit-animation: blink-animation 1s steps(5, start) infinite;
