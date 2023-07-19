@@ -11,12 +11,13 @@
   <script src="js/html5-qrcode.min.js"></script>
   <style>
     body {
-      background-image: url('img/it.jpg');
+      background-image: url('img/tree.jpg');
       background-repeat: no-repeat;
     }
   </style>
 </head>
 <body>
+<div id="app">
   <center>
       <div class="container" style="background-image: url('img/it.jpg');">
       <img id="logo" class="logo">
@@ -27,10 +28,10 @@
       <div id="reader"></div>
       <div style="display: table-cell; padding:3px;">
           <a class="btn" style="border-radius: 5px;" id="reload" onclick="location.reload();"><i class="text-light fa fa-refresh"></i> Reload Camera</a>
-          </div>
-          <div style="display: table-cell; padding:3px;">
+      </div>
+      <div style="display: table-cell; padding:3px;">
           <a class="btn" style="border-radius: 5px;" href="intent://masklowor.github.io/myqr#Intent;scheme=http;package=com.android.chrome;end" onclick="openInChrome();"><i class="fa fa-chrome"></i> Open in Chrome</a>
-          </div><br>
+      </div><br>
           <div id="result"></div>
           <div class="badge">Android / IOS Section</div>
               <p>Scanning Using File In Your Device</p>
@@ -38,12 +39,22 @@
                   <div class="input">
                   <input name=file style="display:none;" id="qr-input-file" type="file" accept="image/*"/>                  
                   <button class="btn" style="border-radius: 5px;" type="button" name=file onclick="file()"><i class="fa fa-camera" aria-hidden="true"> Open File</i></button>                                 
-                </div>
-              <div>QR CODE SCANNER Powered by <a class="font-weight-bold" style="color: #1a8cff" href="https://scanapp.org">ScanApp.org</div><br>
-          
+              </div>
+              <div id="powered">QR CODE SCANNER Powered by <a class="font-weight-bold" href="https://scanapp.org">ScanApp.org</div>
+              <footer>
+              <div class="footer-copyright">
+                  <div class="footer-copyright-wrapper">
+                    <p class="footer-copyright-text">
+                      <a class="footer-copyright-link" id="footer" href="#" target="_self"></a>
+                    </p>
+                  </div>
+              </div>
+            </footer>
           </div>
-  </center>   
+  </center>
+  
+</div>
   <script type="text/javascript">load();</script>
-  <script src="js/scannerv4.js"></script>
+  <script src="js/scannerPtcV1.js"></script>
 </body>
 </html>
