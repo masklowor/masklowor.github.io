@@ -1,0 +1,179 @@
+:root {
+  --primary: #3B71CA;
+  --bg: #fff;
+}
+.card-body {
+    border: 5px solid #007bff;
+    border-radius: 15px;
+}
+.header {
+    background-color: #007bff; 
+    color: white;
+}
+
+.header-logo {
+    border-radius: 5px;
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+}
+
+.header-title {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    padding: 0 1rem; 
+}
+.nav-tabs {
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.qrcode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.qrcode-frame {
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+
+.qrcode-text {
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    font-size: 18px;
+    font-family: cursive;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    width: 100%;
+    background: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+
+/* Responsive Adjustments */
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 1024px) {
+    .qrcode-frame {
+        padding: 15px; 
+        margin-bottom: 30px; 
+    }
+
+    .qrcode-text {
+        bottom: -30px; 
+        font-size: 16px; 
+        padding: 5px 8px;
+    }
+}
+
+/* Mobile Devices (portrait) */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.25rem; 
+    }
+
+    .header-logo {
+        max-width: 150px; 
+    }
+    .nav-tabs {
+        flex-direction: column; 
+    }
+
+    .nav-link {
+        padding: 10px; 
+        font-size: 10px; 
+    }
+    .qrcode-container {
+        padding: 15px; 
+    }
+
+    .qrcode-frame {
+        padding: 10px; 
+        margin-bottom: 30px; 
+    }
+
+    .qrcode-text {
+        bottom: -50px; 
+        font-size: 14px; 
+        padding: 5px 8px;
+    }
+}
+
+/* Small Mobile Devices (portrait) */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1rem; 
+    }
+
+    .header-logo {
+        max-width: 120px; 
+    }
+    .nav-link {
+        padding: 8px; 
+        font-size: 10px; 
+    }
+    .qrcode-frame {
+        padding: 5px; 
+        margin-bottom: 40px; 
+    }
+
+    .qrcode-text {
+        bottom: -50px; 
+        font-size: 12px; 
+        padding: 5px 8px;
+    }
+}
