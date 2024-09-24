@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LombokNetworking QR Code Generator</title>
     <link rel="icon" href="favicon.ico" />
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="qrcode.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    
+    <!-- Bootstrap JS (requires jQuery) -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- QR Code Libraries -->
+    <script src="js/qrcode.js"></script> 
+    <script src="js/qrcode.min.js"></script> 
     <script src="js/html2canvas.min.js"></script>
     <script src="js/jspdf.umd.min.js"></script>
-    <script src="js/qrcode.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/qrcode.js"></script>
+    
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-</head>
 <body>
        <header class="header bg-primary text-white text-center py-3">
         <div class="container">
@@ -66,7 +73,23 @@
                                     <div class="col-md-4 mb-2">
                                         <button id="generateURL" class="btn btn-primary">Generate</button>
                                     </div>
-                                </div>                                 
+                                </div>                                
+                            </div>
+                        </div>
+                         <div class="card">
+                            <div class="card-body">
+                                <h3>How Use URL QR Generator</h3>
+                                <ol>
+                                    <li>
+                                        Input name website on URL Field
+                                    </li>
+                                    <li>
+                                        Type eg "www.examples.com" or "https://examples.com"
+                                    </li>
+                                    <li>
+                                        Then click generate and click download on jpeg or pdf format
+                                    </li>
+                                </ol>                            
                             </div>
                         </div>
                     </div>
@@ -109,6 +132,19 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>How Use Contact QR Generator</h3>
+                                <ol>
+                                    <li>
+                                        Input name, phone number and email on form field
+                                    </li>
+                                    <li>
+                                        Then click generate and click download on jpeg or pdf format
+                                    </li>
+                                </ol>                            
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card">
@@ -139,6 +175,31 @@
                                 <button id="generateMap" class="btn btn-primary">Generate</button>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>How Use Map QR Generator</h3>
+                                <ol>
+                                    <li>
+                                        Open google maps app
+                                    </li>
+                                    <li>
+                                        Find your location
+                                    </li>
+                                    <li>
+                                        Share your location using link from google map apps
+                                    </li>
+                                    <li>
+                                        Copy your link location
+                                    </li>
+                                    <li>
+                                        Input link from google map app to map link field
+                                    </li>
+                                    <li>
+                                        Then click generate and click download on jpeg or pdf format
+                                    </li>
+                                </ol>                            
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card">
@@ -158,6 +219,24 @@
         </div>
     </div>
 
+    <div class="share">
+        <span>Share Site</span>
+        <nav class="social-buttons">
+            <a class="share-button-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://masklowor.github.io/qrgenerator/" target="_blank" aria-label="Share on Facebook">
+                <i data-feather="facebook"></i>
+            </a>
+            <a class="share-button-tw" href="https://twitter.com/intent/tweet?url=https://masklowor.github.io/qrgenerator/&text=qrgenerator" target="_blank" aria-label="Share on Twitter">
+                <i data-feather="twitter"></i>
+            </a>
+            <a class="share-button-ln" href="https://www.linkedin.com/shareArticle?mini=true&url=https://masklowor.github.io/qrgenerator/&title=qrgenerator&summary=QR CODE GENERATOR" target="_blank" aria-label="Share on LinkedIn">
+                <i data-feather="linkedin"></i>
+            </a>
+            <a class="share-button-wa" href="https://api.whatsapp.com/send?text=QR CODE GENERATOR%20https://masklowor.github.io/qrgenerator/" target="_blank" aria-label="Share on WhatsApp">
+                <i data-feather="message-square"></i>
+            </a>
+        </nav>
+    </div>
+
     <footer class="bg-primary text-white text-center py-3 mt-5">
         <div class="socials">
             <a href="https://www.instagram.com/rudy_gunawan_99/?hl=en"><i data-feather="instagram"></i></a>
@@ -168,13 +247,26 @@
         </div>
     </footer>
 
-    <script src="js/myscript.js"> </script>
+    <script src="js/myscript.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const shareSpan = document.querySelector('.share span');
+        const socialButtons = document.querySelector('.social-buttons');
 
+        shareSpan.addEventListener('click', function () {
+            shareSpan.style.opacity = '0'; // Fade out the "Share" button
+            shareSpan.style.transform = 'scale(0.9)'; // Slightly scale down for effect
+            setTimeout(() => {
+                shareSpan.style.display = 'none'; // Hide the "Share" button after the fade out
+                socialButtons.classList.add('active'); // Show social buttons
+            }, 300); // Match this time to the opacity transition duration
+        });
+    });
+
+    </script>
     <script>
           feather.replace();
     </script>
 
 </body>
 </html>
-
-
