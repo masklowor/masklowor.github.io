@@ -1,28 +1,42 @@
 :root {
-  --primary: #3B71CA;
-  --bg: #fff;
+    --primary: #3B71CA;
+    --bg: #fff;
+    --textColor: #333;
+    --buttonColor: #007bff; 
+    --hoverColor: #0056b3; 
+    --twitter: #14171A;
+    --facebook: #4267B2;
+    --google: #db4437; 
+    --github: #333;
+    --linkedin:#004182;
+    --whatsapp:#128C7E;
 }
-.card-body {
-    border: 5px solid #007bff;
-    border-radius: 15px;
+
+body {
+    background-color: var(--bg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 .header {
-    background-color: #007bff; 
+    background-color: var(--primary);
     color: white;
 }
 
 .header-logo {
     border-radius: 5px;
-    width: 100%; 
-    max-width: 200px; 
-    height: auto; 
+    width: 100%;
+    max-width: 200px;
+    height: auto;
 }
 
 .header-title {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 0 1rem; 
+    padding: 0 1rem;
 }
+
 .nav-tabs {
     flex-wrap: wrap;
 }
@@ -36,144 +50,234 @@
     display: block;
     padding: 10px;
     font-size: 16px;
-    text-align: center;
 }
+
+.card {
+    margin-bottom: 20px; 
+}
+
+.card-body {
+    border: 5px solid var(--buttonColor);
+    border-radius: 15px;
+}
+
 .qrcode-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     position: relative;
     padding: 20px;
 }
 
 .qrcode-frame {
     padding: 20px;
-    position: relative;
     display: inline-block;
     background-color: transparent;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .qrcode-text {
     position: absolute;
-    bottom: -50px; 
+    bottom: -50px;
     left: 0;
     font-size: 18px;
     font-family: cursive;
-    color: #333;
+    color: var(--textColor);
     padding: 5px 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
     width: 100%;
     background: white;
     font-weight: bold;
     text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+.share {
+    position: relative;
+    text-align: center;
+    width: 200px; 
+    margin: auto;
+    border-radius: 50px;
+    background-color: #f0f0f0; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 15px; 
+ }
+
+ .share span {
+    width: 100%; 
+    line-height: 1.5; 
+    display: inline-block;
+    font-weight: 700; 
+    text-transform: uppercase; 
+    text-align: center; 
+    margin-bottom: 15px; 
+    color: #fff; 
+    background-color: var(--buttonColor);
+    border-radius: 30px; 
+    padding: 10px 0; 
+    cursor: pointer; /* Change cursor to pointer */
+ }
+
+ .share nav {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    opacity: 0; 
+    transform: translateY(-20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    visibility: hidden; 
+  }
+
+  .share nav.active {
+    opacity: 1; 
+    transform: translateY(0); 
+    visibility: visible; 
+  }
+
+  .share nav a {
+    width: 40px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center;
+    margin: auto; 
+    justify-content: center; 
+    background-color: var(--buttonColor);
+    color: white; 
+    overflow: hidden; 
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 50%; 
+  }
+
+  .share nav a.share-button-fb:hover {
+    background-color:var(--facebook);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .share nav a.share-button-tw:hover {
+    background-color:var(--twitter);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .share nav a.share-button-ln:hover {
+    background-color: var(--linkedin);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .share nav a.share-button-wa:hover {
+    background-color: var(--whatsapp);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+
+
 
 footer {
-  background-color: var(--primary);
-  text-align: center;
-  padding: 1rem 0 2rem;
-  margin-top: 3rem;
-}
-footer .socials {
-  padding: 1rem 0;
-}
-footer .socials a {
-  color: #fff;
-  margin: 1rem;
-}
-footer .socials a:hover,
-footer .links a:hover {
-  color: var(--bg);
-}
-footer .links {
-  margin-bottom: 1.4rem;
-}
-footer .links a {
-  color: #fff;
-  padding: 0.7rem 1rem;
-}
-footer .credit {
-  font-size: 0.8rem;
-}
-footer .credit a {
-  color: var(--bg);
-  font-weight: 700;
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
 }
 
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}
 
 /* Responsive Adjustments */
-
-/* Tablets (portrait and landscape) */
 @media (max-width: 1024px) {
     .qrcode-frame {
-        padding: 15px; 
-        margin-bottom: 30px; 
+        padding: 15px;
+        margin-bottom: 30px;
     }
 
     .qrcode-text {
-        bottom: -30px; 
-        font-size: 16px; 
+        bottom: -30px;
+        font-size: 16px;
         padding: 5px 8px;
     }
 }
 
-/* Mobile Devices (portrait) */
 @media (max-width: 768px) {
     .header-title {
-        font-size: 1.25rem; 
+        font-size: 1.25rem;
     }
 
     .header-logo {
-        max-width: 150px; 
+        max-width: 150px;
     }
+
     .nav-tabs {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .nav-link {
-        padding: 10px; 
-        font-size: 10px; 
+        padding: 10px;
+        font-size: 12px; 
     }
+
     .qrcode-container {
-        padding: 15px; 
+        padding: 15px;
     }
 
     .qrcode-frame {
-        padding: 10px; 
-        margin-bottom: 30px; 
+        padding: 10px;
+        margin-bottom: 30px;
     }
 
     .qrcode-text {
-        bottom: -50px; 
-        font-size: 14px; 
+        bottom: -50px;
+        font-size: 14px;
         padding: 5px 8px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    li {
+        font-size: 12px;
     }
 }
 
-/* Small Mobile Devices (portrait) */
 @media (max-width: 480px) {
     .header-title {
-        font-size: 1rem; 
+        font-size: 1rem;
     }
 
     .header-logo {
-        max-width: 120px; 
+        max-width: 120px;
     }
+
     .nav-link {
-        padding: 8px; 
-        font-size: 10px; 
+        padding: 8px;
+        font-size: 12px; 
     }
+
     .qrcode-frame {
-        padding: 5px; 
-        margin-bottom: 40px; 
+        padding: 5px;
+        margin-bottom: 40px;
     }
 
     .qrcode-text {
-        bottom: -50px; 
-        font-size: 12px; 
+        bottom: -50px;
+        font-size: 12px;
         padding: 5px 8px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+     li {
+        font-size: 12px;
     }
 }
