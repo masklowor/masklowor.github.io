@@ -245,12 +245,19 @@
         <div class="credit">
             <p>Created By <a href="https://lomboknetworking.blogspot.com/p/about-me.html">Rudy Gunawan</a>. | &copy;2024.</p>
         </div>
+        <div class="notification-container">
+            <button type="button" class="btn btn-primary">
+                Web Counter <span class="visitor-counter badge badge-light">0</span>
+            </button>
+        </div>
     </footer>
 
     <script src="js/myscript.js"></script>
     <script>
         document.addEventListener("\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64",function(){const _0xC193=document.querySelector('\x2E\x73\x68\x61\x72\x65\x20\x73\x70\x61\x6E');const _0xC1A0=document.querySelector('\x2E\x73\x6F\x63\x69\x61\x6C\x2D\x62\x75\x74\x74\x6F\x6E\x73');_0xC193.addEventListener('\x63\x6C\x69\x63\x6B',function(){_0xC193.style.opacity= '\x30';_0xC193.style.transform= '\x73\x63\x61\x6C\x65\x28\x30\x2E\x39\x29';setTimeout(()=>{_0xC193.style.display= '\x6E\x6F\x6E\x65';_0xC1A0.classList.add('\x61\x63\x74\x69\x76\x65')},300)})})
     </script>
+    <script>
+        var counterContainer=document.querySelector("\x2E\x76\x69\x73\x69\x74\x6F\x72\x2D\x63\x6F\x75\x6E\x74\x65\x72");var resetButton=document.querySelector("\x23\x72\x65\x73\x65\x74");var visitCount=localStorage.getItem("\x70\x61\x67\x65\x5F\x76\x69\x65\x77");if(visitCount){visitCount= Number(visitCount)+ 1;localStorage.setItem("\x70\x61\x67\x65\x5F\x76\x69\x65\x77",visitCount)}else {visitCount= 1;localStorage.setItem("\x70\x61\x67\x65\x5F\x76\x69\x65\x77",1)};counterContainer.innerHTML= visitCount;resetButton.addEventListener("\x63\x6C\x69\x63\x6B",()=>{visitCount= 1;localStorage.setItem("\x70\x61\x67\x65\x5F\x76\x69\x65\x77",1);counterContainer.innerHTML= visitCount})
     <script>
           feather.replace();
     </script>
