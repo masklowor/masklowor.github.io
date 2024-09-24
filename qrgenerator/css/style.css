@@ -36,7 +36,6 @@ body {
     font-weight: bold;
     padding: 0 1rem;
 }
-
 .nav-tabs {
     flex-wrap: wrap;
 }
@@ -75,7 +74,6 @@ body {
     background-color: transparent;
     margin-bottom: 30px;
 }
-
 .qrcode-text {
     position: absolute;
     bottom: -50px;
@@ -91,7 +89,20 @@ body {
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+.notification-container {
+    text-align: center;
+    margin-bottom: 5px; /* Space between the notification button and share section */
+}
 
+/* Style for the visitor counter inside the button */
+.visitor-counter {
+    font-size: 12px;
+    background-color: #f8f9fa; /* Badge background color */
+    color: #333; /* Text color */
+    border-radius: 10px;
+    padding: 3px 7px;
+    margin-left: 5px;
+}
 .share {
     position: relative;
     text-align: center;
@@ -169,20 +180,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   }
 
-.notification-container {
-    text-align: center;
-    margin-bottom: 5px; /* Space between the notification button and share section */
-}
 
-/* Style for the visitor counter inside the button */
-.visitor-counter {
-    font-size: 12px;
-    background-color: #f8f9fa; /* Badge background color */
-    color: #333; /* Text color */
-    border-radius: 10px;
-    padding: 3px 7px;
-    margin-left: 5px;
-}
 
 footer {
     background-color: var(--primary);
