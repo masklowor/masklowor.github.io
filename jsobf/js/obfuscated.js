@@ -1,8 +1,8 @@
 const appElement = document.getElementById('app');
 
-/* ============================================================
-   Utility Functions
-============================================================ */
+// ===========================
+// Utility Functions
+// ===========================
 
 // Random variable name generator
 function randomVar(len = 12){
@@ -19,7 +19,7 @@ function xorEncrypt(str, key){
     ).join(",");
 }
 
-// XOR decoder template (tanpa eval)
+// XOR decryption JS template
 function xorDecoder(varCipher, varKey){
 return `
 (function(){
@@ -47,9 +47,9 @@ return `
 `;
 }
 
-/* ============================================================
-   MAIN OBFUSCATOR (GitHub Safe Version)
-============================================================ */
+// ===========================
+// Main Obfuscator
+// ===========================
 function obfuscate(){
     let code = document.getElementById("input").value;
     if(!code.trim()) { alert("Kode tidak boleh kosong!"); return; }
@@ -57,15 +57,15 @@ function obfuscate(){
     let output = "";
     let kCode = code;
 
-    // Base64
+    // Base64 encode
     let base = btoa(unescape(encodeURIComponent(kCode)));
 
-    // Double Base64 option
+    // Double Base64
     if(document.getElementById("double").checked){
         base = btoa(base);
     }
 
-    // XOR Encrypt option
+    // XOR Encrypt
     let useXor = document.getElementById("xor").checked;
     let key = randomVar(8);
     let encrypted = "";
@@ -79,14 +79,14 @@ function obfuscate(){
         output += `
 var ${vCipher} = "${encrypted}";
 var ${vKey} = "${key}";
-(new Function(atob(${xorDecoder(vCipher, vKey)})))();
+eval(atob(${xorDecoder(vCipher, vKey)}));
 `;
-    } else {
-        // GitHub-safe executor (tanpa eval)
-        output += `(new Function(atob("${base}")))();`;
+    } 
+    else {
+        output += `eval(atob("${base}"));`;
     }
 
-    // Anti debugger
+    // Anti Debugger (opsional)
     if(document.getElementById("anti").checked){
         output = antiDebug() + output;
     }
@@ -94,9 +94,10 @@ var ${vKey} = "${key}";
     document.getElementById("output").value = output;
 }
 
-/* ============================================================
-   FILE DOWNLOAD
-============================================================ */
+
+// ===========================
+// Download to .js file
+// ===========================
 function downloadFile(){
     const content = document.getElementById("output").value;
     if(!content.trim()) { alert("Generate dulu!"); return; }
@@ -108,13 +109,10 @@ function downloadFile(){
     link.click();
 }
 
-/* ============================================================
-   DATE–TIME AUTO UPDATE (safe)
-============================================================ */
+// =====================================
+// DATE & TIME AUTO UPDATE
+// =====================================
 function updateDateTime() {
-  const el = document.getElementById('dateTime');
-  if (!el) return;
-
   const now = new Date();
   const options = {
     weekday: 'long',
@@ -123,23 +121,24 @@ function updateDateTime() {
     day    : 'numeric',
     hour   : '2-digit',
     minute : '2-digit',
-    second : '2-digit'
+    second : '2-digit',
+    timeZoneName: 'short'
   };
 
-  el.textContent = now.toLocaleString('id-ID', options);
+  document.getElementById('dateTime').textContent = now.toLocaleString('id-ID', options);
 }
 
-if (document.getElementById('dateTime')) {
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-}
+setInterval(updateDateTime, 1000);
+updateDateTime();
 
-/* ============================================================
-   STATIC ELEMENT INIT (safe)
-============================================================ */
-const logo = document.getElementById('logo');
-if (logo) logo.src = './img/capture.gif';
 
-const footer = document.getElementById('footer');
-if (footer)
-    footer.innerText = 'Designed Authorized : Rudy Gunawan,ST (CCNA,MTCRE,MTCNA). | All rights reserved. Copyright © 2023.';
+// =====================================
+// STATIC ELEMENTS
+// =====================================
+document.getElementById('logo').src = 'img/capture.gif';
+document.getElementById('footer').innerText =
+  'Designed Authorized : Rudy Gunawan,ST (CCNA,MTCRE,MTCNA). | All rights reserved. Copyright © 2023.';
+  
+
+// Initialize preview at load
+updatePreview();
