@@ -109,13 +109,9 @@ function downloadFile(){
 }
 
 // =====================================
-// DATE & TIME AUTO UPDATE (optional)
+// DATE & TIME AUTO UPDATE
 // =====================================
-
 function updateDateTime() {
-  const el = document.getElementById('dateTime');
-  if (!el) return; // prevent error jika tidak ada di HTML
-
   const now = new Date();
   const options = {
     weekday: 'long',
@@ -128,27 +124,21 @@ function updateDateTime() {
     timeZoneName: 'short'
   };
 
-  el.textContent = now.toLocaleString('id-ID', options);
+  document.getElementById('dateTime').textContent = now.toLocaleString('id-ID', options);
 }
 
-// Jalan setiap 1 detik hanya jika elemen ada
-if (document.getElementById('dateTime')) {
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
 
 // =====================================
-// STATIC ELEMENTS (safe version)
+// STATIC ELEMENTS
 // =====================================
+document.getElementById('logo').src = 'img/capture.gif';
+document.getElementById('footer').innerText =
+  'Designed Authorized : Rudy Gunawan,ST (CCNA,MTCRE,MTCNA). | All rights reserved. Copyright © 2023.';
+  
 
-const logo = document.getElementById('logo');
-if (logo) {
-    logo.src = 'img/capture.gif';
-}
-
-const footer = document.getElementById('footer');
-if (footer) {
-    footer.innerText =
-      'Designed Authorized : Rudy Gunawan,ST (CCNA,MTCRE,MTCNA). | All rights reserved. Copyright © 2023.';
-}
+// Initialize preview at load
+updatePreview();
 
