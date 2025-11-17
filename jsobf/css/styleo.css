@@ -1,0 +1,197 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #10b981;
+  --muted: #98a2b3;
+}
+
+/* ===========================
+   BODY & LAYOUT
+=========================== */
+body {
+  font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #071029 0%, #07182a 100%);
+  color: #e6eef8;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 120px;
+  opacity: 0.8;
+}
+
+/* ===========================
+   CARD
+=========================== */
+.card {
+  width: 760px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(6px);
+}
+
+
+.logo {
+  display: inline-block;
+  border-radius: 5px; 
+  margin: 2px;
+  width: 300px; 
+  height: auto;
+}
+
+textarea { 
+   width: 100%; 
+   height: 180px; 
+   padding: 10px 10px auto; 
+   border-radius: 8px;
+   border: 1px solid rgba(255, 255, 255, 0.15); 
+   background: rgba(255, 255, 255, 0.03);
+   color: #e6eef8;
+   resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 14px;
+  margin: 10px 5px 0 0;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  color: #042018;
+  background: var(--accent);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.chip {
+  margin-right: 6px;
+}
+
+.row { 
+   margin-top: 16px; 
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+  background: var(--bg);
+  padding: 5px;
+}
+
+.footer-copyright-link {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  text-decoration: none;
+}
+
+@media (max-width: 560px) {
+
+   body {
+    padding: 0;
+    margin: 0;
+    display: block;        
+  }
+
+  .app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 95%;            
+    margin: 10px auto;     
+    padding: 16px;
+  }
+
+  .logo {
+    width: 90px;
+    margin-bottom: 12px;
+  }
+
+  textarea {
+   height: 140px;
+   font-size: 13px;
+   margin: 0 auto;
+   width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .row {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  textarea {
+   height: 140px;
+   font-size: 13px;
+   margin: 0 auto;
+   width: 100%;
+  }
+
+  .app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 94%;
+    margin: 10px auto;
+    padding: 14px;
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .row label {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
