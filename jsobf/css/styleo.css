@@ -117,11 +117,6 @@ footer {
     padding: 16px;
   }
 
-  .logo {
-    width: 90px;
-    margin-bottom: 12px;
-  }
-
   textarea {
    height: 140px;
    font-size: 13px;
@@ -161,6 +156,12 @@ footer {
    width: 100%;
   }
 
+  .logo {
+    width: 100%;
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+
   .app {
     width: 100%;
     display: flex;
@@ -171,13 +172,6 @@ footer {
     width: 94%;
     margin: 10px auto;
     padding: 14px;
-  }
-
-  .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
   }
 
   button {
