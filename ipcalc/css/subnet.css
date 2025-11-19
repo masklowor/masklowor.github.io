@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 85%;
+  height: 100vh;
 }
 img {
   max-width: 200px;
@@ -185,3 +185,4 @@ span {
     font-size: 55%;
   }
 }
+
