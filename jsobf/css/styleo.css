@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #071029 0%, #07182a 100%);
+  background: radial-gradient(circle at center, #03111f, #000000 80%);
   color: #e6eef8;
 }
 
@@ -31,12 +31,15 @@ body {
    CARD
 =========================== */
 .card {
-  width: 760px;
-  padding: 20px;
+  width: 100%;
+  max-width: 650px;
+  background: rgba(0, 20, 40, 0.55);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  backdrop-filter: blur(6px);
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: holoPulse 6s infinite linear;
 }
 
 
@@ -46,6 +49,25 @@ body {
   margin: 2px;
   width: 300px; 
   height: auto;
+  filter: drop-shadow(0 0 15px #00eaff);
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #00eaff;
+  text-shadow: 0 0 12px #00eaff, 0 0 20px #007fa1;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#dateTime {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #00eaff;
+  text-shadow: 0 0 12px #00eaff, 0 0 20px #007fa1;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 textarea { 
@@ -53,9 +75,12 @@ textarea {
    height: 180px; 
    padding: 10px 10px auto; 
    border-radius: 8px;
-   border: 1px solid rgba(255, 255, 255, 0.15); 
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.1);
+   border: 1px solid rgba(0, 255, 255, 0.2);
+   backdrop-filter: blur(8px);
+   animation: holoPulse 6s infinite linear; 
    background: rgba(255, 255, 255, 0.03);
-   color: #e6eef8;
+   color: #b8f7ff;
    resize: vertical;
 }
 
@@ -65,10 +90,12 @@ button {
   margin: 10px 5px 0 0;
   border-radius: 10px;
   font-weight: 600;
-  border: none;
-  color: #042018;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  color: #010101;
   background: var(--accent);
   transition: 0.2s ease;
+  text-shadow: 0 0 3px #ffffff;
+  animation: holoPulse 6s infinite linear;
 }
 
 button:hover {
@@ -92,8 +119,12 @@ footer {
 }
 
 .footer-copyright-link {
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+  color: #00eaff;
+  text-shadow: 0 0 12px #00eaff, 0 0 20px #007fa1;
+  letter-spacing: 2px;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -171,7 +202,7 @@ footer {
   .card {
     width: 94%;
     margin: 10px auto;
-    padding: 14px;
+    padding: 20px; 
   }
 
   button {
