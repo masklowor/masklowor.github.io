@@ -107,18 +107,17 @@ button:hover {
 }
 
 .btn-group {
-  width: 100%;
   display: flex;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
-  gap: 12px;                 
-  margin-top: 10px;
-  flex-wrap: wrap;           
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .btn-group button {
-  width: 45%;                
-  max-width: 200px;         
+  flex: 1 1 45% !important; 
+  max-width: 200px;
 }
 
 .tsubnet {
@@ -204,3 +203,4 @@ footer .footer-copyright-text {
   .container { padding: 20px; }
   h1 { font-size: 1.6rem; }
 }
+
