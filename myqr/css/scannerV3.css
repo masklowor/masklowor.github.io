@@ -103,6 +103,9 @@ canvas {
   border-radius: 12px;
   pointer-events: none;
 }
+#result {
+  color: var(--text-color);
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -233,3 +236,4 @@ footer a:hover {
     font-size: 0.75rem;
   }
 }
+
