@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 100vh;
+  height: 85%;
 }
 img {
   max-width: 200px;
@@ -71,23 +71,33 @@ img {
 .row form .btn:hover {
   background-color: #555;
 }
-input[type="text"],
-button {
-  background-color: #008cca;
+input[type="text"] {
+  background-color: transparent;
   border: 1px solid #008cca;
-  margin: 1px;
+  margin: 5px 1px;
   text-align: center;
   font-size: 16px;
   color: #fff;
-  text-shadow: 1px 1px 1px #010101;
-  text-decoration: none;
-  display: inline-block;
-  margin: 5px 1px;
-  width: 230px;
   height: 30px;
+  width: 230px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Tombol tetap */
+button {
+  background-color: #008cca;
+  border: 1px solid #008cca;
+  margin: 5px 1px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  height: 30px;
+  width: 230px;
   cursor: pointer;
   border-radius: 5px;
 }
+/*----------------------------------------*/
 button:hover {
   background-color: #555;
 }
