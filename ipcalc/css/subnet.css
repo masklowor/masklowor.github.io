@@ -117,7 +117,7 @@ button:hover {
 
 .btn-group button {
   flex: 1 1 45% !important; 
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .tsubnet {
@@ -203,4 +203,5 @@ footer .footer-copyright-text {
   .container { padding: 20px; }
   h1 { font-size: 1.6rem; }
 }
+
 
