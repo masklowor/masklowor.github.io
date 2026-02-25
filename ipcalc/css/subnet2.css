@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at center, #03111f, #000000 80%);
+  color: #00eaff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(0, 20, 40, 0.55);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2),
+              inset 0 0 20px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: holoPulse 6s infinite linear;
+}
+
+@keyframes holoPulse {
+  0% { box-shadow: 0 0 16px rgba(0, 255, 255, 0.25); }
+  50% { box-shadow: 0 0 35px rgba(0, 255, 255, 0.55); }
+  100% { box-shadow: 0 0 16px rgba(0, 255, 255, 0.25); }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 12px #00eaff;
+}
+
+img {
+  max-width: 80%;
+  display: block;
+  margin: 10px auto 20px;
+  filter: drop-shadow(0 0 15px #00eaff);
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid #00d0ff;
+  border-radius: 6px;
+  color: #b8f7ff;
+  transition: 0.25s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #00faff;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #00eaff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  background: #009bbd;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+#results {
+  margin-top: 25px;
+}
+
+.tsubnet {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: rgba(0, 15, 30, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tsubnet th {
+  background: #00eaff;
+  color: #03111f;
+  padding: 10px;
+  text-align: center;
+}
+
+.tsubnet td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.tsubnet tr:nth-child(even) {
+  background: rgba(0, 255, 255, 0.05);
+}
+
+span {
+  font-weight: bold;
+  color: #00eaff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  .btn-group { flex-direction: column; }
+}
